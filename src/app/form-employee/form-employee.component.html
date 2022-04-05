@@ -42,6 +42,6 @@
       />
     </div>
     <button (click)="addEmployee()" *ngIf="!isEdit">Add</button>
-    <button (click)="saveEmployee()">Save</button>
+    <button (click)="saveEmployee()" *ngIf="isEdit">Save</button>
   </form>
 </div>

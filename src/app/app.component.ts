@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 
@@ -20,6 +21,7 @@ export class AppComponent {
     phone: ''
   };
   employees: Employee[] = [];
+  subscription$: Subscription = new Subscription;
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -28,7 +30,7 @@ export class AppComponent {
   }
 
   getEmployeeList() {
-    this.employeeService.get().subscribe((employees) => {
+   this.subscription$ = this.employeeService.get().subscribe((employees) => {
       this.employees = employees;
     });
   }
@@ -50,6 +52,6 @@ export class AppComponent {
   }
 
   ngOnDestroy(): void {
-    // this.employeeService.get().unsubscribe();
+    this.subscription$.unsubscribe();
   }
 }

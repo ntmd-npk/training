@@ -23,7 +23,7 @@ export class FormEmployeeComponent implements OnInit {
   constructor(private employeeService: EmployeeService) { }
 
   ngOnChanges() {
-    console.log(this.employee.id)
+    this.isEdit = !!this.employee.id
   }
 
   ngOnInit(): void {
@@ -56,6 +56,7 @@ export class FormEmployeeComponent implements OnInit {
   saveEmployee() {
     if (this.validEmployee()) {
       this.employeeChange.emit(this.employee)
+      this.isEdit = false;
       this.resetEmployee();
     } else {
       alert('Please fill out all fields!!!');
