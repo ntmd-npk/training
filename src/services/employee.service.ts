@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { Employee } from './employee';
-import { EMPLOYEES } from './employee-data';
+import { Employee } from '../mock/employee';
+import { EMPLOYEES } from '../mock/employee-data';
 @Injectable({
   providedIn: 'root'
 })
@@ -43,7 +43,6 @@ export class EmployeeService {
     this.employees.push(newOne)
     this.employees$.next(this.employees);
   }
-
 
   edit(employee: Employee) {
     const editEmployee = this.employees.find(_ => _.id === employee.id);

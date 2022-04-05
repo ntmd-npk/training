@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Employee } from '../employee';
-import { EmployeeService } from '../employee.service';
+import { Employee } from '../../mock/employee';
+import { EmployeeService } from '../../services/employee.service';
 @Component({
   selector: 'app-form-employee',
   templateUrl: './form-employee.component.html',
@@ -37,6 +37,7 @@ export class FormEmployeeComponent implements OnInit {
     this.employee.address = '';
     this.employee.phone = '';
   }
+
   validEmployee() {
     return this.employee.name &&
       this.employee.birth &&

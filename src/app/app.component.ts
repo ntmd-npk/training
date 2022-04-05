@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Employee } from './employee';
-import { EmployeeService } from './employee.service';
+import { Employee } from '../mock/employee';
+import { EmployeeService } from '../services/employee.service';
 
 
 @Component({
