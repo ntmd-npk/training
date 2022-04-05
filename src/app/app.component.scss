@@ -1,0 +1,14 @@
+.employee{
+    td,
+    th {
+        padding: 0.5rem 1rem;
+        input{
+            margin-left: 2rem;
+            border: none;
+            outline: none;
+            &.editable{
+                border: 1px solid #000;
+            }
+        }
+    }
+}

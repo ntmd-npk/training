@@ -1,0 +1,42 @@
+<div class="employee">
+  <h2 class="employee-title">{{ title }}</h2>
+  <table class="employee-list">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Born</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>
+          {{ employee.id }}
+        </td>
+        <td>
+          {{ employee.name }}
+        </td>
+        <td>
+          {{ employee.birth | formatDate }}
+        </td>
+        <td>
+          {{ employee.address }}
+        </td>
+        <td>
+          {{ employee.phone }}
+        </td>
+        <div class="employee-actions">
+          <button (click)="editEmployee(employee.id)">Edit</button>
+          <button (click)="deleteEmployee(employee.id)">Delete</button>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+  <app-form-employee
+    [(employee)]="employee"
+    (employeeChange)="employeeChange()"
+  ></app-form-employee>
+</div>
