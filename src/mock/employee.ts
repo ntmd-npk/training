@@ -1,7 +1,9 @@
-export interface Employee {
-    id: number;
-    name: string;
-    birth: string;
-    address: string;
-    phone: string;
-  }
+export interface Employee
+{
+  [key: string]: any;
+  id: number;
+  name: string;
+  birth: string;
+  address: string;
+  phone: string;
+}

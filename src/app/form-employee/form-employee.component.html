@@ -41,7 +41,7 @@
         [(ngModel)]="employee.phone"
       />
     </div>
-    <button (click)="addEmployee()" *ngIf="!isEdit">Add</button>
-    <button (click)="saveEmployee()" *ngIf="isEdit">Save</button>
+    <dx-button (onClick)="addEmployee()" *ngIf="!isEdit">Add</dx-button>
+    <dx-button (onClick)="saveEmployee()" *ngIf="isEdit">Save</dx-button>
   </form>
 </div>

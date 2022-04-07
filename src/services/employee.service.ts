@@ -1,58 +1,40 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Employee } from '../mock/employee';
-import { EMPLOYEES } from '../mock/employee-data';
+import { HttpClient } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService {
+export class EmployeeService
+{
 
-  employee: Employee = {
-    id: 0,
-    name: '',
-    birth: '',
-    address: '',
-    phone: '',
-  };
-  employees: Employee[] = EMPLOYEES
-  employees$: BehaviorSubject<Employee[]> = new BehaviorSubject<Employee[]>(EMPLOYEES);
-  store$: Observable<any> = this.employees$.asObservable();
+  url = 'https://localhost:7053/api/employee';
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  get() {
-    return this.employees$;
+  get(): Observable<any>
+  {
+    return this.http.get<Employee[]>(this.url);
   }
 
-  delete(id: number) {
-    this.employees = this.employees.filter(_ => _.id !== id);
-    this.employees$.next(this.employees);
+  delete(id: number): Observable<any>
+  {
+    return this.http.delete(`${this.url}/${id}`).pipe(catchError(this.handleError));
   }
 
-  add(newEmployee: Employee) {
-
-    const id = this.employees.slice(-1)[0].id + 1;
-    const newOne: Employee = {
-      id,
-      name: newEmployee.name,
-      birth: newEmployee.birth,
-      address: newEmployee.address,
-      phone: newEmployee.phone
-    }
-    this.employees.push(newOne)
-    this.employees$.next(this.employees);
+  add(employee: any): Observable<any>
+  {
+    return this.http.post(this.url, employee);
   }
 
-  edit(employee: Employee) {
-    const editEmployee = this.employees.find(_ => _.id === employee.id);
-    if (editEmployee) {
-      editEmployee.id = employee.id
-      editEmployee.name = employee.name
-      editEmployee.address = employee.address
-      editEmployee.birth = employee.birth
-      editEmployee.phone = employee.phone
-    }
-    this.employees$.next(this.employees);
+  edit(id: number, data: any): Observable<any>
+  {
+    return this.http.put(`${this.url}/${id}`, data).pipe(catchError(this.handleError));
+  }
+
+  handleError(err: any)
+  {
+    return throwError(err);
   }
 }

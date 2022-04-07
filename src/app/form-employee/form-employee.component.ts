@@ -47,7 +47,7 @@ export class FormEmployeeComponent implements OnInit {
 
   addEmployee() {
     if (this.validEmployee()) {
-      this.employeeService.add(this.employee);
+      // this.employeeService.add(this.employee);
       this.resetEmployee();
     } else {
       alert('Please fill out all fields!!!');
