@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+  "FilePath": "d:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\Employee.Presentation.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "EmployeeAPI",
+  "RootNamespace": "Employee.Presentation",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

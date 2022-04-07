@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj": {}
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {}
   },
   "projects": {
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
         "projectName": "Employee.Repository",
-        "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\obj\\",
+        "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duyen Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +68,14 @@
         }
       }
     },
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
         "projectName": "Employee.Service",
-        "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\obj\\",
+        "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duyen Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +92,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
               }
             }
           }
@@ -97,6 +107,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,10 +1,16 @@
-### training Employee list
+## Training: Employee list
 
 This project using Angular as front-end and C# as backend
 
-# How to run
+### How to run
 
-__S1:__ Access the folder  EmployeeAPI/wwwroot -> This is the place containing all the front-end code. Using __ng s__ to start.
-Parse the link _http://localhost:4000_ to the address bar in the browser.
+**S1:** Access the folder EmployeeAPI/wwwroot -> This is the place containing all the front-end code. Install the packages and use the ng start command to start.
+Parse the link
+[localhost](http://localhost:4200) to the address bar in the browser.
 
-__S2:__ Run the C# code.
+> npm install
+> ng s
+
+Link: <http://localhost:4200>
+
+**S2:** Run the C# code.

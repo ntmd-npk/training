@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using EmployeeAPI.Models;
+using Employee.Repository.Models;
+using Employee.Repository.Context;
+using Employee.Service.Service;
 
 namespace EmployeeAPI.Controllers
 {
@@ -7,73 +9,49 @@ namespace EmployeeAPI.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private static readonly List<EmployeeItem> _context = new List<EmployeeItem> {
-            new EmployeeItem{Id = 0,  Name  = "Pham Lua", Birth = "2002-02-12", Address = "103 Nguyen Huy Tu", Phone = "0845162362"} ,
-            new EmployeeItem{Id = 1, Name  = "Huyen Nguyen", Birth = "2002-02-12", Address = "103 Nguyen Huy Tu", Phone = "0845162362"},
-            new EmployeeItem{Id = 2,  Name  = "Diem Truong", Birth = "2002-02-12", Address = "103 Nguyen Huy Tu", Phone = "0845162362"} ,
-        };
-
-        public EmployeeController()
+        private IEmployeeService _employeeService;
+        public EmployeeController(IEmployeeService employeeService)
         {
-            //_context.Add(new EmployeeItem());
-            //_context.Add(new EmployeeItem());
+            _employeeService = employeeService;
         }
 
         // GET: api/Employee
         [HttpGet]
-        public ActionResult<List<EmployeeItem>> GetEmployeeItems() => Ok(_context);
+        public ActionResult GetEmployees()
+        {
+            var employees = _employeeService.Get();
+
+            return Ok(employees);
+        }
 
         // GET
         [HttpGet("{id}")]
-        public ActionResult GetEmployeeItem(int id)
+        public ActionResult GetEmployee(int id)
         {
-            EmployeeItem employee = _context.Find((item) => item.Id == id);
-
-            if (employee == null)
-                return NotFound();
-
-            return Ok(employee.Id);
+            return EmployeeService.GetEmployeeById();
         }
 
         // POST
         [HttpPost]
-        public ActionResult<int> PostEmployeeItem(EmployeeItem employee)
+        public ActionResult<int> PostEmployee(EmployeeInfo employee)
         {
-            var maxId = _context.Max(_ => _.Id);
-            employee.Id = ++maxId;
-            _context.Add(employee);
-
-            return Ok(employee.Id);
+            return EmployeeService.Create(employee);
         }
 
 
         // DELETE
         [HttpDelete("{id}")]
-        public ActionResult DeleteEmployeeItem(int id)
+        public ActionResult DeleteEmployee(int id)
         {
-            EmployeeItem employee = _context.Find((item) => item.Id == id);
-
-            if (employee == null)
-                return BadRequest();
-
-            _context.Remove(employee);
-
-            return NoContent();
+            return EmployeeService.Delete(id);
         }
 
 
         // PUT
         [HttpPut("{id}")]
-        public ActionResult UpdateEmployeeItem(int id, EmployeeItem employee)
+        public ActionResult UpdateEmployee(int id, EmployeeInfo employee)
         {
-            var editEmployee = _context.First(_ => _.Id == id);
-
-            if (editEmployee == null) { return NotFound(); }
-            if (!string.IsNullOrEmpty(employee.Name)) { editEmployee.Name = employee.Name; }
-            if (!string.IsNullOrEmpty(employee.Birth)) { editEmployee.Birth = employee.Birth; }
-            if (!string.IsNullOrEmpty(employee.Address)) { editEmployee.Address = employee.Address; }
-            if (!string.IsNullOrEmpty(employee.Phone)) { editEmployee.Phone = employee.Phone; }
-            return NoContent();
+            return EmployeeService.Update(id, employee);
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj": {}
+    "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\EmployeeAPI.csproj": {}
   },
   "projects": {
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
         "projectName": "Employee.Repository",
-        "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\obj\\",
+        "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duyen Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +64,14 @@
         }
       }
     },
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
         "projectName": "Employee.Service",
-        "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\obj\\",
+        "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duyen Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +88,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
               }
             }
           }
@@ -116,14 +122,14 @@
         }
       }
     },
-    "D:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\EmployeeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\EmployeeAPI.csproj",
         "projectName": "EmployeeAPI",
-        "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\EmployeeAPI.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\EmployeeAPI\\obj\\",
+        "outputPath": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duyen Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,11 +146,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
               },
-              "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj": {
-                "projectPath": "D:\\TrainingProject\\backend\\EmployeeAPI\\Employee.Services\\Employee.Service.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj"
               }
             }
           }
@@ -159,21 +165,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNet.WebApi.Cors": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[6.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },
