@@ -4,12 +4,12 @@
     "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {}
   },
   "projects": {
-    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
-        "projectName": "Employee.Repository",
-        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
         "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\obj\\",
         "projectStyle": "PackageReference",
@@ -92,8 +92,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj"
               }
             }
           }

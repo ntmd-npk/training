@@ -556,9 +556,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
-      "projectName": "Employee.Repository",
-      "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
+      "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
+      "projectName": "Repository",
+      "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
       "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\obj\\",
       "projectStyle": "PackageReference",

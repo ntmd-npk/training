@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Employee.Repository.Models
+namespace Repository.Models
 {
-    public class EmployeeInfo
+    public class Employee : IEntity
     {
         [Key]
         public int Id { get; set; }

@@ -1,7 +1,7 @@
-﻿using Employee.Repository.Models;
-using Employee.Repository.Context;
+﻿using Repository.Models;
+using Repository.Context;
 
-namespace Employee.Repository.Repository
+namespace Repository.Repository
 {
     public class EmployeeRepository : IEmployeeRepository
     {
@@ -12,9 +12,9 @@ namespace Employee.Repository.Repository
             _context = context;
         }
 
-        public IEnumerable<EmployeeInfo> Get()
+        public IEnumerable<Employee> Get()
         {
-            return _context.EmployeeList;
+            return _context.EmployeeList.OrderBy(e => e.Id);
         }
         public void Delete(int id)
         {
@@ -29,7 +29,7 @@ namespace Employee.Repository.Repository
             _context.SaveChanges();
         }
 
-        public int Create(EmployeeInfo employee)
+        public int Create(Models.Employee employee)
         {
             if (_context.EmployeeList.Count() == 0)
             {
@@ -40,7 +40,6 @@ namespace Employee.Repository.Repository
                 var maxId = _context.EmployeeList.Max(_ => _.Id);
                 employee.Id = ++maxId;
             }
-
             _context.EmployeeList.Add(employee);
             _context.SaveChanges();
 
@@ -59,7 +58,7 @@ namespace Employee.Repository.Repository
         //     return 1;
         // }
 
-        public void Update(int id, EmployeeInfo employee)
+        public void Update(int id, Models.Employee employee)
         {
 
             var editEmployee = _context.EmployeeList.FirstOrDefault((e) => e.Id == id);

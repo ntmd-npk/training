@@ -23,9 +23,9 @@ export class EmployeeService
     return this.http.delete(`${this.url}/${id}`).pipe(catchError(this.handleError));
   }
 
-  add(employee: any): Observable<any>
+  add(employee: any): Observable<number>
   {
-    return this.http.post(this.url, employee);
+    return this.http.post<number>(this.url, employee);
   }
 
   edit(id: number, data: any): Observable<any>

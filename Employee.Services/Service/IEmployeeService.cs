@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Employee.Repository.Models;
-namespace Employee.Service.Service
+using Repository.Models;
+namespace Service.Service
 {
     public interface IEmployeeService
     {
-        IEnumerable<EmployeeInfo> Get();
+        IEnumerable<Employee> Get();
 
         // EmployeeInfo GetById(int id);
-        int Create(EmployeeInfo employee);
-        void Update(int id, EmployeeInfo employee);
+        int Create(Employee employee);
+        void Update(int id, Employee employee);
         void Delete(int id);
     }
 }

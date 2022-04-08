@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { FormatDatePipe } from '../pipe/format.date';
 import { FormEmployeeComponent } from './form-employee/form-employee.component';
 import { HttpClientModule } from '@angular/common/http';
-import {
+import
+{
   DxButtonModule,
   DxDataGridModule,
   DxFormModule,
@@ -25,4 +26,4 @@ import {
   exports: [FormatDatePipe],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

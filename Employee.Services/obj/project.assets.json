@@ -1134,7 +1134,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Employee.Repository/1.0.0": {
+      "Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1142,10 +1142,10 @@
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.3"
         },
         "compile": {
-          "bin/placeholder/Employee.Repository.dll": {}
+          "bin/placeholder/Repository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Employee.Repository.dll": {}
+          "bin/placeholder/Repository.dll": {}
         }
       }
     }
@@ -4057,16 +4057,16 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Employee.Repository/1.0.0": {
+    "Repository/1.0.0": {
       "type": "project",
-      "path": "../Employee.Repository/Employee.Repository.csproj",
-      "msbuildProject": "../Employee.Repository/Employee.Repository.csproj"
+      "path": "../Employee.Repository/Repository.csproj",
+      "msbuildProject": "../Employee.Repository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Employee.Repository >= 1.0.0",
-      "Microsoft.AspNetCore.Mvc.Core >= 2.2.5"
+      "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4075,9 +4075,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
-      "projectName": "Employee.Service",
-      "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
+      "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj",
+      "projectName": "Service",
+      "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj",
       "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
       "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\obj\\",
       "projectStyle": "PackageReference",
@@ -4096,8 +4096,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
-              "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
+            "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
+              "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj"
             }
           }
         }

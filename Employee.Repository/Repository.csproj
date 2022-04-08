@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Context\EmployeeContext.cs" />
+    <Compile Remove="Repository\EmployeeRepository.cs" />
+    <Compile Remove="Repository\IEmployeeRepository.cs" />
+    <Compile Remove="Repository\IGenericRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.3" />
   </ItemGroup>

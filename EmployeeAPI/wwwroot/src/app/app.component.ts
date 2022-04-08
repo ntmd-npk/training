@@ -20,7 +20,6 @@ export class AppComponent
   type = "";
   message = "Some message";
 
-
   constructor(private employeeService: EmployeeService) { }
 
   // Get employee list
@@ -44,19 +43,22 @@ export class AppComponent
   // Add a new employee
   async onRowInserting(e: any)
   {
+    e.data.id = this.newId--;
     const newId = await lastValueFrom(this.employeeService.add(e.data)).catch(() =>
     {
       this.employees.pop();
     });
-    this.newId = newId;
-    e.data.id = newId;
+
+    const employee = this.employees.find(_ => _.id === e.data.id);
+    if (employee)
+      employee.id = +newId;
   }
 
   async onRowInserted(e: any)
   {
-    e.data.id = this.newId;
+    // e.data.id = this.newId;
     this.notify("success", "A new employee is added");
-    e.component.navigateToRow(e.key);
+    // e.component.navigateToRow(e.key);
   }
 
   // Delete a new employee

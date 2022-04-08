@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8G355CH/c4xJX8dUigO1Ez5WVuuqu51oQKPFUyHuaMy0A4Ag1j2liY3fa6zVUrT/o6pgdURgG96JG8guMiFiog==",
+  "dgSpecHash": "Te9U7dkjvjCb50zcrXDEMEO/+XCZUysfos5T0j0Rn1mJLpqaaI/Fk0gZYwxpqaXkb+RvqGEu3+xP9qA5QzrOSQ==",
   "success": true,
-  "projectFilePath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
+  "projectFilePath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",

@@ -4,12 +4,12 @@
     "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\Employee.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
-        "projectName": "Employee.Repository",
-        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
         "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\obj\\",
         "projectStyle": "PackageReference",
@@ -68,12 +68,12 @@
         }
       }
     },
-    "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {
+    "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
-        "projectName": "Employee.Service",
-        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj",
+        "projectUniqueName": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj",
         "packagesPath": "C:\\Users\\Duyen Nguyen\\.nuget\\packages\\",
         "outputPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\obj\\",
         "projectStyle": "PackageReference",
@@ -92,8 +92,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj"
               }
             }
           }
@@ -156,11 +156,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj": {
-                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Employee.Repository.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Repository\\Repository.csproj"
               },
-              "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj": {
-                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Employee.Service.csproj"
+              "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj": {
+                "projectPath": "D:\\TrainingProject\\employee-list\\training\\Employee.Services\\Service.csproj"
               }
             }
           }

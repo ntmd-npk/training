@@ -1,0 +1,12 @@
+D:\TrainingProject\employee-list\training\Employee.Repository\bin\Debug\net6.0\Repository.deps.json
+D:\TrainingProject\employee-list\training\Employee.Repository\bin\Debug\net6.0\Repository.dll
+D:\TrainingProject\employee-list\training\Employee.Repository\bin\Debug\net6.0\Repository.pdb
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.dll
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\refint\Repository.dll
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\Repository.pdb
+D:\TrainingProject\employee-list\training\Employee.Repository\obj\Debug\net6.0\ref\Repository.dll

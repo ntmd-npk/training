@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Employee.Repository.Context;
-using Employee.Service.Service;
-using Employee.Repository.Repository;
-using Employee.Repository.Models;
+using Repository.Repository;
+using Repository.Context;
+using Repository.Models;
+using Service.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<EmployeeContext>(opt =>
+builder.Services.AddDbContext<ManageContext>(opt =>
    opt.UseInMemoryDatabase("EmployeeList"));
 
 var serviceProvider = builder.Services.BuildServiceProvider();
-var dbContext = serviceProvider.GetService<EmployeeContext>();
+var dbContext = serviceProvider.GetService<ManageContext>();
 dbContext.InitData();
 
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
@@ -22,8 +22,8 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
 
 var app = builder.Build();

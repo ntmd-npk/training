@@ -1,23 +1,24 @@
-﻿using Employee.Repository.Models;
-using Employee.Repository;
+﻿using Repository.Models;
+using Repository;
 using Microsoft.AspNetCore.Mvc;
-using Employee.Repository.Repository;
+using Repository.Repository;
 
-namespace Employee.Service.Service
+namespace Service.Service
 {
     public class EmployeeService : IEmployeeService
     {
-        private readonly IEmployeeRepository _employeeRepository;
-        public EmployeeService(IEmployeeRepository employeeRepository)
+        private readonly IRepository _employeeRepository;
+        //private readonly IGenericRepository<Employee> _employeeRepository;
+        public EmployeeService(IRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }
-        public IEnumerable<EmployeeInfo> Get()
+        public IEnumerable<Employee> Get()
         {
             return _employeeRepository.Get();
         }
 
-        public int Create(EmployeeInfo employee)
+        public int Create(Employee employee)
         {
             return _employeeRepository.Create(employee);
         }
@@ -33,7 +34,7 @@ namespace Employee.Service.Service
         //     _employeeRepository.GetById(id);
         // }
 
-        public void Update(int id, EmployeeInfo employee)
+        public void Update(int id, Repository.Models.Employee employee)
         {
             _employeeRepository.Update(id, employee);
         }

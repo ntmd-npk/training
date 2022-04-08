@@ -1,13 +1,13 @@
-﻿using Employee.Repository.Models;
+﻿using Repository.Models;
 
-namespace Employee.Repository.Repository
+namespace Repository.Repository
 {
     public interface IEmployeeRepository
     {
-        IEnumerable<EmployeeInfo> Get();
+        IEnumerable<Employee> Get();
         // EmployeeInfo GetById(int id);
-        int Create(EmployeeInfo employee);
-        void Update(int id, EmployeeInfo employee);
+        int Create(Employee employee);
+        void Update(int id, Models.Employee employee);
         void Delete(int id);
     }
 }

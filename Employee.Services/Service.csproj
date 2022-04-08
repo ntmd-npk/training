@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Service\EmployeeService.cs" />
+    <Compile Remove="Service\IEmployeeService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Employee.Repository\Employee.Repository.csproj" />
+    <ProjectReference Include="..\Employee.Repository\Repository.csproj" />
   </ItemGroup>
 
 </Project>

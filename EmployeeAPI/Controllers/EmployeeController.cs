@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Employee.Repository.Models;
-using Employee.Repository.Context;
-using Employee.Service.Service;
+using Repository.Models;
+using Repository.Context;
+using Service.Service;
 
 namespace EmployeeAPI.Controllers
 {
@@ -9,8 +9,8 @@ namespace EmployeeAPI.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private IEmployeeService _employeeService;
-        public EmployeeController(IEmployeeService employeeService)
+        private IBaseService<Employee> _employeeService;
+        public EmployeeController(IBaseService<Employee> employeeService)
         {
             _employeeService = employeeService;
         }
@@ -32,7 +32,7 @@ namespace EmployeeAPI.Controllers
 
         // POST
         [HttpPost]
-        public ActionResult<int> PostEmployee(EmployeeInfo employee)
+        public ActionResult<int> PostEmployee(Employee employee)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace EmployeeAPI.Controllers
 
         // PUT
         [HttpPut("{id}")]
-        public ActionResult UpdateEmployee(int id, EmployeeInfo employee)
+        public ActionResult UpdateEmployee(int id, Employee employee)
         {
             try
             {
