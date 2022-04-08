@@ -6,9 +6,9 @@ namespace Employee.Service.Service
     {
         IEnumerable<EmployeeInfo> Get();
 
-        //ActionResult GetEmployeeById(int id);
-        //ActionResult Create(EmployeeInfo employee);
-        //ActionResult Update(int id, EmployeeInfo employee);
+        // EmployeeInfo GetById(int id);
+        int Create(EmployeeInfo employee);
+        void Update(int id, EmployeeInfo employee);
         void Delete(int id);
     }
 }

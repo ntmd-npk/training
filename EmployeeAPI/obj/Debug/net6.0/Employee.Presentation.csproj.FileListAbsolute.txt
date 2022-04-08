@@ -275,3 +275,5 @@ D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\refint\Em
 D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\Employee.Presentation.pdb
 D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\Employee.Presentation.genruntimeconfig.cache
 D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\ref\Employee.Presentation.dll
+D:\TrainingProject\employee-list\training\EmployeeAPI\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\TrainingProject\employee-list\training\EmployeeAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll

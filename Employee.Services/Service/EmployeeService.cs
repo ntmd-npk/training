@@ -12,14 +12,30 @@ namespace Employee.Service.Service
         {
             _employeeRepository = employeeRepository;
         }
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<EmployeeInfo> Get()
         {
             return _employeeRepository.Get();
+        }
+
+        public int Create(EmployeeInfo employee)
+        {
+            return _employeeRepository.Create(employee);
+        }
+
+        public void Delete(int id)
+        {
+            _employeeRepository.Delete(id);
+        }
+
+
+        // public EmployeeInfo GetById(int id)
+        // {
+        //     _employeeRepository.GetById(id);
+        // }
+
+        public void Update(int id, EmployeeInfo employee)
+        {
+            _employeeRepository.Update(id, employee);
         }
     }
 }

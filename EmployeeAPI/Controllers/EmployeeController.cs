@@ -19,23 +19,30 @@ namespace EmployeeAPI.Controllers
         [HttpGet]
         public ActionResult GetEmployees()
         {
-            var employees = _employeeService.Get();
-
-            return Ok(employees);
-        }
-
-        // GET
-        [HttpGet("{id}")]
-        public ActionResult GetEmployee(int id)
-        {
-            return EmployeeService.GetEmployeeById();
+            try
+            {
+                var employees = _employeeService.Get();
+                return Ok(employees);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // POST
         [HttpPost]
         public ActionResult<int> PostEmployee(EmployeeInfo employee)
         {
-            return EmployeeService.Create(employee);
+            try
+            {
+                var id = _employeeService.Create(employee);
+                return Ok(id);
+            }
+            catch
+            {
+                return NotFound();
+            }
         }
 
 
@@ -43,7 +50,15 @@ namespace EmployeeAPI.Controllers
         [HttpDelete("{id}")]
         public ActionResult DeleteEmployee(int id)
         {
-            return EmployeeService.Delete(id);
+            try
+            {
+                _employeeService.Delete(id);
+                return NoContent();
+            }
+            catch
+            {
+                return NotFound();
+            }
         }
 
 
@@ -51,7 +66,25 @@ namespace EmployeeAPI.Controllers
         [HttpPut("{id}")]
         public ActionResult UpdateEmployee(int id, EmployeeInfo employee)
         {
-            return EmployeeService.Update(id, employee);
+            try
+            {
+                _employeeService.Update(id, employee);
+                return NoContent();
+            }
+            catch
+            {
+                return NotFound();
+            }
         }
+
+
+        // GET
+        // [HttpGet("{id}")]
+        // public ActionResult GetEmployee(int id)
+        // {
+        //     var employee = _employeeService.GetById(id);
+
+        //     return Ok(employee);
+        // }
     }
 }

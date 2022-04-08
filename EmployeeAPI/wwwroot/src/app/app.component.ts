@@ -38,9 +38,10 @@ export class AppComponent
       this.employees.pop();
     });
     this.newId = newId;
+    e.data.id = newId;
   }
 
-  onRowInserted(e: any)
+  async onRowInserted(e: any)
   {
     e.data.id = this.newId;
     e.component.navigateToRow(e.key);
