@@ -9,6 +9,7 @@ import {
   DxButtonModule,
   DxDataGridModule,
   DxFormModule,
+  DxToastModule
 } from 'devextreme-angular';
 @NgModule({
   declarations: [AppComponent, FormatDatePipe, FormEmployeeComponent],
@@ -18,6 +19,7 @@ import {
     DxButtonModule,
     DxDataGridModule,
     DxFormModule,
+    DxToastModule,
     HttpClientModule
   ],
   exports: [FormatDatePipe],

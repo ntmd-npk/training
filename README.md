@@ -9,6 +9,7 @@ Parse the link
 [localhost](http://localhost:4200) to the address bar in the browser.
 
 > npm install
+>
 > ng s
 
 Link: <http://localhost:4200>

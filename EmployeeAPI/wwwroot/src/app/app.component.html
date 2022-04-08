@@ -9,7 +9,7 @@
     (onRowInserting)="onRowInserting($event)"
     (onRowInserted)="onRowInserted($event)"
     (onRowUpdating)="onRowUpdating($event)"
-    >
+  >
     <dxo-paging [pageSize]="10"></dxo-paging>
     <dxo-pager
       [showPageSizeSelector]="true"
@@ -63,4 +63,11 @@
     <dxi-column dataField="address"></dxi-column>
     <dxi-column dataField="phone"></dxi-column>
   </dx-data-grid>
+  <dx-toast
+    [(visible)]="isVisible"
+    [type]="type"
+    [message]="message"
+    height="50"
+  >
+  </dx-toast>
 </div>

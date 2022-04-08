@@ -16,6 +16,10 @@ export class AppComponent
   subsTemp$: Subscription = new Subscription;
   subs: Subscription[] = [];
   newId = -3;
+  isVisible = false;
+  type = "";
+  message = "Some message";
+
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -28,6 +32,13 @@ export class AppComponent
   getEmployeeList()
   {
     this.subs.push(this.employeeService.get().subscribe((employees) => this.employees = employees));
+  }
+
+  notify(type: string, message: string)
+  {
+    this.isVisible = true;
+    this.type = type;
+    this.message = message;
   }
 
   // Add a new employee
@@ -44,6 +55,7 @@ export class AppComponent
   async onRowInserted(e: any)
   {
     e.data.id = this.newId;
+    this.notify("success", "A new employee is added");
     e.component.navigateToRow(e.key);
   }
 
@@ -56,6 +68,7 @@ export class AppComponent
       error: () =>
       {
         this.employees.splice(index, 0, oldData);
+        this.notify("error", "There is some problems during processing. Your action can not be completed. Please retry again.");
       }
     }));
   }
@@ -78,6 +91,7 @@ export class AppComponent
             }
           }
         }
+        this.notify("error", "There is some problems during processing. Your action can not be completed. Please retry again.");
       }
     }));
   }
@@ -86,5 +100,4 @@ export class AppComponent
   {
     this.subs.forEach(element => element.unsubscribe());
   }
-
 }
