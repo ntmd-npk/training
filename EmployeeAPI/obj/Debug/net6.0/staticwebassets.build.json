@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AUDUfn0u5OVH5u8PEFRTrCZvfKKHWMVIIg6frl5xhII=",
+  "Hash": "qAlqX25gbVvSv4No7DRXGALNNdR/QdpXZNOBfdNU9Fc=",
   "Source": "Presentation",
   "BasePath": "_content/Presentation",
   "Mode": "Default",
@@ -238,12 +238,12 @@
       "OriginalItemSpec": "wwwroot\\src\\app\\app.module.ts"
     },
     {
-      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\form-employee\\form-employee.component.html",
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\grid-table\\grid-table.component.html",
       "SourceId": "Presentation",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
       "BasePath": "_content/Presentation",
-      "RelativePath": "src/app/form-employee/form-employee.component.html",
+      "RelativePath": "src/app/grid-table/grid-table.component.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\form-employee\\form-employee.component.html"
+      "OriginalItemSpec": "wwwroot\\src\\app\\grid-table\\grid-table.component.html"
     },
     {
-      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\form-employee\\form-employee.component.scss",
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\grid-table\\grid-table.component.scss",
       "SourceId": "Presentation",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
       "BasePath": "_content/Presentation",
-      "RelativePath": "src/app/form-employee/form-employee.component.scss",
+      "RelativePath": "src/app/grid-table/grid-table.component.scss",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\form-employee\\form-employee.component.scss"
+      "OriginalItemSpec": "wwwroot\\src\\app\\grid-table\\grid-table.component.scss"
     },
     {
-      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\form-employee\\form-employee.component.spec.ts",
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\grid-table\\grid-table.component.spec.ts",
       "SourceId": "Presentation",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
       "BasePath": "_content/Presentation",
-      "RelativePath": "src/app/form-employee/form-employee.component.spec.ts",
+      "RelativePath": "src/app/grid-table/grid-table.component.spec.ts",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\form-employee\\form-employee.component.spec.ts"
+      "OriginalItemSpec": "wwwroot\\src\\app\\grid-table\\grid-table.component.spec.ts"
     },
     {
-      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\form-employee\\form-employee.component.ts",
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\app\\grid-table\\grid-table.component.ts",
       "SourceId": "Presentation",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
       "BasePath": "_content/Presentation",
-      "RelativePath": "src/app/form-employee/form-employee.component.ts",
+      "RelativePath": "src/app/grid-table/grid-table.component.ts",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,7 +303,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\form-employee\\form-employee.component.ts"
+      "OriginalItemSpec": "wwwroot\\src\\app\\grid-table\\grid-table.component.ts"
     },
     {
       "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\assets\\.gitkeep",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\assets\\.gitkeep"
+    },
+    {
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\constants\\index.ts",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "src/constants/index.ts",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\constants\\index.ts"
     },
     {
       "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\src\\environments\\environment.prod.ts",
@@ -593,6 +610,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\tsconfig.spec.json"
+    },
+    {
+      "Identity": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\yarn.lock",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TrainingProject\\employee-list\\training\\EmployeeAPI\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "yarn.lock",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\yarn.lock"
     }
   ]
 }

@@ -77,14 +77,5 @@ namespace EmployeeAPI.Controllers
             }
         }
 
-
-        // GET
-        // [HttpGet("{id}")]
-        // public ActionResult GetEmployee(int id)
-        // {
-        //     var employee = _employeeService.GetById(id);
-
-        //     return Ok(employee);
-        // }
     }
 }

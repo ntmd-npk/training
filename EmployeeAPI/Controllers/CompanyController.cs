@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repository.Models;
+using Repository.Context;
 using Service.Service;
+
 
 namespace Presentation.Controllers
 {
@@ -14,7 +16,7 @@ namespace Presentation.Controllers
             _companyService = companyService;
         }
 
-        // GET: api/Employee
+        // GET: api/company
         [HttpGet]
         public ActionResult GetCompany()
         {
@@ -75,15 +77,5 @@ namespace Presentation.Controllers
                 return NotFound();
             }
         }
-
-
-        // GET
-        // [HttpGet("{id}")]
-        // public ActionResult GetEmployee(int id)
-        // {
-        //     var employee = _employeeService.GetById(id);
-
-        //     return Ok(employee);
-        // }
     }
 }

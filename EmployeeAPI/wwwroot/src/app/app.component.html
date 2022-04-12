@@ -1,68 +1,15 @@
 <div class="employee">
-  <h2 class="employee-title">{{ title }}</h2>
-  <dx-data-grid
-    id="gridContainer"
-    [dataSource]="employees"
-    keyExpr="id"
-    [showBorders]="true"
-    (onRowRemoving)="onRowRemoving($event)"
-    (onRowInserting)="onRowInserting($event)"
-    (onRowInserted)="onRowInserted($event)"
-    (onRowUpdating)="onRowUpdating($event)"
-  >
-    <dxo-paging [pageSize]="10"></dxo-paging>
-    <dxo-pager
-      [showPageSizeSelector]="true"
-      [allowedPageSizes]="[5, 10, 15]"
-      [showInfo]="true"
-    >
-    </dxo-pager>
-    <dxo-editing
-      mode="popup"
-      [allowAdding]="true"
-      [allowUpdating]="true"
-      [allowDeleting]="true"
-      caption="Actions"
-      ><dxo-popup
-        title="Employee Info"
-        [showTitle]="true"
-        [width]="700"
-        [height]="525"
-      >
-      </dxo-popup>
-      <dxo-form>
-        <dxi-item itemType="group" [colSpan]="2">
-          <dxi-item dataField="name"
-            ><dxi-validation-rule type="required"></dxi-validation-rule
-            ><dxi-validation-rule
-              type="pattern"
-              pattern="^[a-zA-Z\s]*$"
-              message="Name can only contain letters"
-            ></dxi-validation-rule
-          ></dxi-item>
-          <dxi-item dataField="birth"
-            ><dxi-validation-rule type="required"></dxi-validation-rule
-          ></dxi-item>
-          <dxi-item dataField="address"
-            ><dxi-validation-rule type="required"></dxi-validation-rule
-          ></dxi-item>
-          <dxi-item dataField="phone"
-            ><dxi-validation-rule type="required"></dxi-validation-rule
-            ><dxi-validation-rule
-              type="pattern"
-              pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
-              message="Phone number must follow Vietnam new dialing code!"
-            ></dxi-validation-rule
-          ></dxi-item>
-        </dxi-item>
-      </dxo-form>
-    </dxo-editing>
-    <dxi-column dataField="id" [allowEditing]="false"></dxi-column>
-    <dxi-column dataField="name"></dxi-column>
-    <dxi-column dataField="birth" caption="Born" dataType="date"></dxi-column>
-    <dxi-column dataField="address"></dxi-column>
-    <dxi-column dataField="phone"></dxi-column>
-  </dx-data-grid>
+  <dx-tabs [dataSource]="tabs" [(selectedIndex)]="selectedIndex"></dx-tabs>
+  <app-grid-table
+    *ngIf="selectedIndex === 0"
+    title="Employee"
+    [(dataSource)]="employeeData"
+  ></app-grid-table>
+  <app-grid-table
+    *ngIf="selectedIndex === 1"
+    title="Company"
+    [(dataSource)]="companyData"
+  ></app-grid-table>
   <dx-toast
     [(visible)]="isVisible"
     [type]="type"

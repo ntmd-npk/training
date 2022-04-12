@@ -277,3 +277,4 @@ D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\Presentat
 D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\Presentation.genruntimeconfig.cache
 D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\ref\Presentation.dll
 D:\TrainingProject\employee-list\training\EmployeeAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\TrainingProject\employee-list\training\EmployeeAPI\obj\Debug\net6.0\Presentation.MvcApplicationPartsAssemblyInfo.cs

@@ -1,5 +1,6 @@
 ﻿using Repository.Models;
 using Repository.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Repository
 {
@@ -7,32 +8,43 @@ namespace Repository.Repository
     {
 
         private readonly ManageContext _context;
-        //private DbSet<T> entities;
+        private DbSet<T> entities;
 
         public BaseRepository(ManageContext context)
         {
             _context = context;
-            // entities = _context.Set<T>();
+            entities = _context.Set<T>();
         }
 
         public IEnumerable<T> Get()
         {
-            return _context.Set<T>();
+            return entities;
         }
 
         public int Create(T entity)
         {
-            var id = _context.Set<T>().Max(_ => _.Id);
-            _context.Set<T>().Add(entity);
+            var id = entities.Max(_ => _.Id);
+            entities.Add(entity);
             _context.SaveChanges();
             return id;
         }
 
         public void Update(int id, T entity)
         {
-            var editEmployee = _context.Set<T>().Find(id);
-            if (editEmployee != null)
+            var editItem = entities.Find(id);
+            if (editItem != null)
             {
+                // Get properties
+                // Loop in properties, get newValue from edit object
+                //      - If edit object has null value on property ==> Continue
+                //      - If edit object has value => set new value to object in database
+                var props = entity.GetType().GetProperties();
+                foreach (var prop in props)
+                {
+                    if (prop.Name == "Id") continue;
+                    var value = prop.GetValue(entity, null);
+                    if (value != null) { prop.SetValue(editItem, value, null); };
+                }
                 _context.SaveChanges();
             }
             else
@@ -43,10 +55,10 @@ namespace Repository.Repository
 
         public void Delete(int id)
         {
-            var deleteEmployee = _context.Set<T>().Find(id);
-            if (deleteEmployee != null)
+            var deleteItem = entities.Find(id);
+            if (deleteItem != null)
             {
-                _context.Set<T>().Remove(deleteEmployee);
+                entities.Remove(deleteItem);
                 _context.SaveChanges();
             }
             else

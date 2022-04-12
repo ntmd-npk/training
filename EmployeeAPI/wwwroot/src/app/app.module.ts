@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FormatDatePipe } from '../pipe/format.date';
-import { FormEmployeeComponent } from './form-employee/form-employee.component';
 import { HttpClientModule } from '@angular/common/http';
-import
-{
+import {
   DxButtonModule,
   DxDataGridModule,
   DxFormModule,
-  DxToastModule
+  DxToastModule,
+  DxTabsModule,
 } from 'devextreme-angular';
+import { GridTableComponent } from './grid-table/grid-table.component';
 @NgModule({
-  declarations: [AppComponent, FormatDatePipe, FormEmployeeComponent],
+  declarations: [AppComponent, FormatDatePipe, GridTableComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -21,9 +21,10 @@ import
     DxDataGridModule,
     DxFormModule,
     DxToastModule,
-    HttpClientModule
+    DxTabsModule,
+    HttpClientModule,
   ],
   exports: [FormatDatePipe],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -11,7 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<ManageContext>(opt =>
-   opt.UseInMemoryDatabase("EmployeeList"));
+   {
+       opt.UseInMemoryDatabase("Employee");
+   });
 
 var serviceProvider = builder.Services.BuildServiceProvider();
 var dbContext = serviceProvider.GetService<ManageContext>();
